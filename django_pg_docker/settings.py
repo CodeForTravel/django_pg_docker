@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "home",
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ WSGI_APPLICATION = "django_pg_docker.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": env("POSTGRES_ENGINE"),
-        "NAME": env("POSTGRES_DATABASE"),
+        "NAME": env("POSTGRES_DB"),
         "USER": env("POSTGRES_USER"),
         "PASSWORD": env("POSTGRES_PASSWORD"),
         "HOST": env("POSTGRES_HOST"),  # set in docker-compose.yml
